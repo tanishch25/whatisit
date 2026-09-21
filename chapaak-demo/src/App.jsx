@@ -1,12 +1,10 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-
-// Lazy load below-the-fold components to speed up initial load
-const MenuHighlights = lazy(() => import('./components/MenuHighlights'));
-const Gallery = lazy(() => import('./components/Gallery'));
-const Footer = lazy(() => import('./components/Footer'));
+import MenuHighlights from './components/MenuHighlights';
+import Gallery from './components/Gallery';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,11 +12,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Suspense fallback={<div className="h-40 flex items-center justify-center text-chapaak-brand">Loading...</div>}>
-        <MenuHighlights />
-        <Gallery />
-        <Footer />
-      </Suspense>
+      <MenuHighlights />
+      <Gallery />
+      <Footer />
     </div>
   );
 }
