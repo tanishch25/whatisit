@@ -7,7 +7,26 @@
     <title>chapaak-demo</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <style>
+        .initial-loader {
+          position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+          display: flex; flex-direction: column; align-items: center; justify-content: center;
+          background-color: #fdfaf6; font-family: sans-serif;
+        }
+        .spinner {
+          width: 50px; height: 50px; border: 3px solid #f9cdb3;
+          border-top-color: #c2410c; border-radius: 50%;
+          animation: spin 1s linear infinite; mb-4;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        .loading-text { color: #c2410c; font-weight: bold; margin-top: 20px; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; }
+      </style>
+      <div class="initial-loader">
+        <div class="spinner"></div>
+        <div class="loading-text">Chapaak</div>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
