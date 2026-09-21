@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-chapaak-orange: #ea580c;
+  --color-chapaak-yellow: #eab308;
+  --color-chapaak-green: #16a34a;
+  --color-chapaak-dark: #1e293b;
+  --color-chapaak-light: #fdfaf6;
+  --color-chapaak-brand: #c2410c;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-chapaak-light);
+    color: #475569;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #0f172a;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+}
