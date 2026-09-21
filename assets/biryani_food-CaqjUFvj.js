@@ -1,1 +1,0 @@
-var e=`/whatisit/assets/biryani_food-5l5ZEtED.webp`;export{e as t};
