@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import restaurantInterior from '../assets/restaurant_interior.jpg';
+import restaurantInterior from '../assets/restaurant_interior.webp';
 
 const About = () => {
   return (

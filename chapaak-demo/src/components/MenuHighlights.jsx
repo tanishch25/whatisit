@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import heroFood from '../assets/hero_food.jpg';
-import chineseFood from '../assets/chinese_food.jpg';
-import biryaniFood from '../assets/biryani_food.jpg';
-import streetFood from '../assets/street_food.jpg';
+import heroFood from '../assets/hero_food.webp';
+import chineseFood from '../assets/chinese_food.webp';
+import biryaniFood from '../assets/biryani_food.webp';
+import streetFood from '../assets/street_food.webp';
 
 const menuCategories = [
   {
