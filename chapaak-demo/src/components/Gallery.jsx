@@ -1,11 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import restaurantInterior from '../assets/restaurant_interior.jpg';
+import heroFood from '../assets/hero_food.jpg';
+import biryaniFood from '../assets/biryani_food.jpg';
+import streetFood from '../assets/street_food.jpg';
 
 const images = [
-  '/restaurant_interior.jpg',
-  '/hero_food.jpg',
-  '/biryani_food.jpg',
-  '/street_food.jpg',
+  restaurantInterior,
+  heroFood,
+  biryaniFood,
+  streetFood,
 ];
 
 const Gallery = () => {

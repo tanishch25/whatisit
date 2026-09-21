@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import restaurantInterior from '../assets/restaurant_interior.jpg';
 
 const About = () => {
   return (
@@ -32,7 +33,7 @@ const About = () => {
           >
             <div className="aspect-[3/4] rounded-t-full rounded-b-full overflow-hidden shadow-2xl shadow-slate-200/50 p-2 border border-slate-100">
               <img 
-                src="/restaurant_interior.jpg" 
+                src={restaurantInterior} 
                 alt="Restaurant Interior" 
                 className="w-full h-full object-cover rounded-t-full rounded-b-full hover:scale-105 transition-transform duration-1000"
               />

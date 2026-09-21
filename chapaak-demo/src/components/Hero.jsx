@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Star } from 'lucide-react';
+import heroFood from '../assets/hero_food.jpg';
+import streetFood from '../assets/street_food.jpg';
 
 const Hero = () => {
   const { scrollY } = useScroll();
@@ -85,7 +87,7 @@ const Hero = () => {
               className="absolute top-0 right-0 w-3/4 h-[400px] rounded-[2rem] overflow-hidden shadow-2xl z-10"
             >
               <img 
-                src="/hero_food.jpg" 
+                src={heroFood} 
                 alt="Main Dish" 
                 className="w-full h-full object-cover"
               />
@@ -99,7 +101,7 @@ const Hero = () => {
               className="absolute bottom-10 left-0 w-[55%] h-[300px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#fdfaf6] z-20"
             >
               <img 
-                src="/street_food.jpg" 
+                src={streetFood} 
                 alt="Secondary Dish" 
                 className="w-full h-full object-cover"
               />

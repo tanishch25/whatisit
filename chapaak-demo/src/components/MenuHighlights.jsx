@@ -1,30 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import heroFood from '../assets/hero_food.jpg';
+import chineseFood from '../assets/chinese_food.jpg';
+import biryaniFood from '../assets/biryani_food.jpg';
+import streetFood from '../assets/street_food.jpg';
 
 const menuCategories = [
   {
     title: 'North Indian',
     subtitle: 'Authentic & Rich',
     description: 'Creamy curries, buttery naans, and authentic aromatic spices cooked to perfection.',
-    image: '/hero_food.jpg',
+    image: heroFood,
   },
   {
     title: 'Sizzling Chinese',
     subtitle: 'Wok-Tossed Excellence',
     description: 'Spicy manchurian, hakka noodles, and fiery gravies with a perfect balance of umami.',
-    image: '/chinese_food.jpg',
+    image: chineseFood,
   },
   {
     title: 'Aromatic Biryani',
     subtitle: 'Fragrant & Spiced',
     description: 'Premium basmati cooked slowly with exotic spices, saffron, and fresh herbs.',
-    image: '/biryani_food.jpg',
+    image: biryaniFood,
   },
   {
     title: 'Street Food',
     subtitle: 'Tangy & Crunchy',
     description: 'Vibrant chaats, pani puri, and perfectly spiced snacks to hit the exact spot.',
-    image: '/street_food.jpg',
+    image: streetFood,
   }
 ];
 
