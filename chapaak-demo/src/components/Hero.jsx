@@ -37,13 +37,13 @@ const Hero = () => {
               <span className="text-chapaak-brand text-xs font-bold uppercase tracking-[0.3em]">Pure Vegetarian</span>
             </motion.div>
             
-            <div className="relative mb-8">
-              <h1 className="text-6xl md:text-7xl lg:text-[7rem] font-medium text-slate-900 leading-none tracking-tight relative z-10">
+            <div className="relative mb-8 text-left w-full">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-medium text-slate-900 leading-none tracking-tight relative z-10">
                 Chapaak<span className="text-chapaak-brand">.</span>
               </h1>
-              <div className="flex items-center gap-4 mt-4 ml-2">
-                <div className="h-[2px] w-12 bg-chapaak-brand"></div>
-                <h2 className="text-2xl md:text-3xl italic text-slate-500 font-light font-serif tracking-wide">
+              <div className="flex items-center gap-2 sm:gap-4 mt-4 ml-1 sm:ml-2">
+                <div className="h-[2px] w-8 sm:w-12 bg-chapaak-brand shrink-0"></div>
+                <h2 className="text-xl sm:text-2xl md:text-3xl italic text-slate-500 font-light font-serif tracking-wide leading-tight">
                   A Splash of Flavours
                 </h2>
               </div>
@@ -77,14 +77,14 @@ const Hero = () => {
 
           </motion.div>
 
-          {/* Right Images (Collage) */}
-          <div className="w-full lg:w-1/2 relative h-[600px] hidden md:block">
+          {/* Right Images (Collage) - Now visible on mobile */}
+          <div className="w-full lg:w-1/2 relative h-[400px] sm:h-[500px] md:h-[600px] mt-8 lg:mt-0">
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
               style={{ y: y1 }}
-              className="absolute top-0 right-0 w-3/4 h-[400px] rounded-[2rem] overflow-hidden shadow-2xl z-10"
+              className="absolute top-0 right-0 w-full md:w-3/4 h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl z-10"
             >
               <img 
                 src={heroFood} 
@@ -98,7 +98,7 @@ const Hero = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
               style={{ y: y2 }}
-              className="absolute bottom-10 left-0 w-[55%] h-[300px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#fdfaf6] z-20"
+              className="absolute bottom-0 md:bottom-10 left-0 w-[65%] md:w-[55%] h-[200px] md:h-[300px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#fdfaf6] z-20"
             >
               <img 
                 src={streetFood} 
@@ -112,15 +112,15 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="absolute top-20 left-10 z-30 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-xl"
+              className="absolute top-10 md:top-20 left-4 md:left-10 z-30 bg-white/90 backdrop-blur-sm p-2 md:p-3 rounded-full shadow-xl"
             >
               <motion.div 
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, ease: "linear", repeat: Infinity }}
-                className="w-24 h-24 border border-slate-200 rounded-full flex flex-col items-center justify-center text-center border-dashed"
+                className="w-16 h-16 md:w-24 md:h-24 border border-slate-200 rounded-full flex flex-col items-center justify-center text-center border-dashed"
               >
-                <span className="text-[9px] font-sans font-bold uppercase tracking-widest text-slate-500 mb-1">Authentic</span>
-                <span className="text-xs font-serif italic text-chapaak-brand">Flavours</span>
+                <span className="text-[7px] md:text-[9px] font-sans font-bold uppercase tracking-widest text-slate-500 mb-0.5 md:mb-1">Authentic</span>
+                <span className="text-[9px] md:text-xs font-serif italic text-chapaak-brand">Flavours</span>
               </motion.div>
             </motion.div>
           </div>
