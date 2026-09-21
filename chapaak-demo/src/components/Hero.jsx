@@ -49,17 +49,17 @@ const Hero = () => {
               </div>
             </div>
             
-            <p className="text-lg text-slate-500 mb-10 leading-relaxed max-w-md font-sans font-light">
+            <p className="text-base md:text-lg text-slate-500 mb-10 leading-relaxed max-w-md font-sans font-light">
               Experience the vibrant and authentic taste of North Indian, Chinese, and Street Food delicacies curated for the ultimate dining experience.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-              <a href="#menu" className="group relative bg-slate-900 text-white px-8 py-4 rounded-full font-sans text-sm font-semibold tracking-widest uppercase overflow-hidden flex items-center justify-center transition-all hover:bg-slate-800 hover:shadow-2xl hover:shadow-slate-900/20">
-                <span>Explore Menu</span>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
+              <button className="group relative bg-chapaak-brand text-white px-8 py-4 rounded-full font-sans text-sm font-semibold tracking-widest uppercase overflow-hidden flex items-center justify-center transition-all shadow-lg shadow-orange-900/20 active:scale-95">
+                <span>Book a Table</span>
                 <ArrowRight className="ml-3 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href="#about" className="group flex items-center justify-center px-8 py-4 text-slate-900 font-sans text-sm font-semibold tracking-widest uppercase hover:text-chapaak-brand transition-colors">
-                Our Story
+              </button>
+              <a href="#menu" className="group flex items-center justify-center px-8 py-4 text-slate-900 bg-white border border-slate-200 rounded-full font-sans text-sm font-semibold tracking-widest uppercase hover:border-chapaak-brand hover:text-chapaak-brand transition-all active:scale-95 shadow-sm">
+                Explore Menu
               </a>
             </div>
 
@@ -67,25 +67,35 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}
-              className="mt-16 flex flex-col items-center lg:items-start"
+              className="mt-12 flex items-center lg:items-start space-x-4"
             >
-              <div className="flex text-chapaak-yellow">
-                {[1,2,3,4,5].map(i => <Star key={i} className="h-4 w-4 fill-current" />)}
+              <div className="flex -space-x-3">
+                {[1,2,3].map(i => (
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-[#fdfaf6] bg-slate-200 flex items-center justify-center overflow-hidden">
+                    <img src={i === 1 ? heroFood : i === 2 ? streetFood : streetFood} className="w-full h-full object-cover" />
+                  </div>
+                ))}
               </div>
-              <span className="text-sm font-sans text-slate-500 mt-2 font-medium">Loved by 1000+ guests</span>
+              <div className="flex flex-col items-start">
+                <div className="flex text-chapaak-yellow">
+                  {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-current" />)}
+                </div>
+                <span className="text-[10px] font-sans text-slate-500 mt-1 font-bold uppercase tracking-wider">1000+ Happy Guests</span>
+              </div>
             </motion.div>
 
           </motion.div>
 
-          {/* Right Images (Collage) - Now visible on mobile */}
-          <div className="w-full lg:w-1/2 relative h-[400px] sm:h-[500px] md:h-[600px] mt-8 lg:mt-0">
+          {/* Right Images (Collage) - Ultra Premium Mobile & Desktop */}
+          <div className="w-full lg:w-1/2 relative h-[380px] sm:h-[500px] md:h-[600px] mt-4 lg:mt-0">
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.95, rotate: -2 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
               style={{ y: y1 }}
-              className="absolute top-0 right-0 w-full md:w-3/4 h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl z-10"
+              className="absolute top-0 right-0 w-[85%] md:w-3/4 h-[280px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl z-10 border-4 border-white"
             >
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
               <img 
                 src={heroFood} 
                 alt="Main Dish" 
@@ -94,11 +104,11 @@ const Hero = () => {
             </motion.div>
             
             <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -30, rotate: 2 }}
+              animate={{ opacity: 1, x: 0, rotate: -4 }}
               transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
               style={{ y: y2 }}
-              className="absolute bottom-0 md:bottom-10 left-0 w-[65%] md:w-[55%] h-[200px] md:h-[300px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[#fdfaf6] z-20"
+              className="absolute bottom-4 md:bottom-10 left-0 w-[60%] md:w-[55%] h-[220px] md:h-[300px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white z-20"
             >
               <img 
                 src={streetFood} 
@@ -112,15 +122,15 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="absolute top-10 md:top-20 left-4 md:left-10 z-30 bg-white/90 backdrop-blur-sm p-2 md:p-3 rounded-full shadow-xl"
+              className="absolute top-4 md:top-20 left-0 md:left-10 z-30 bg-white/95 backdrop-blur-md p-1.5 md:p-3 rounded-full shadow-xl"
             >
               <motion.div 
                 animate={{ rotate: 360 }}
-                transition={{ duration: 20, ease: "linear", repeat: Infinity }}
-                className="w-16 h-16 md:w-24 md:h-24 border border-slate-200 rounded-full flex flex-col items-center justify-center text-center border-dashed"
+                transition={{ duration: 25, ease: "linear", repeat: Infinity }}
+                className="w-20 h-20 md:w-24 md:h-24 border border-slate-200 rounded-full flex flex-col items-center justify-center text-center border-dashed"
               >
-                <span className="text-[7px] md:text-[9px] font-sans font-bold uppercase tracking-widest text-slate-500 mb-0.5 md:mb-1">Authentic</span>
-                <span className="text-[9px] md:text-xs font-serif italic text-chapaak-brand">Flavours</span>
+                <span className="text-[8px] md:text-[9px] font-sans font-bold uppercase tracking-[0.2em] text-slate-500 mb-0.5 md:mb-1">Authentic</span>
+                <span className="text-[10px] md:text-xs font-serif italic text-chapaak-brand">Flavours</span>
               </motion.div>
             </motion.div>
           </div>
