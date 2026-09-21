@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Star } from 'lucide-react';
-import heroFood from '../assets/hero_food.webp';
-import streetFood from '../assets/street_food.webp';
+
+const heroFood = '/whatisit/hero_food.webp';
+const streetFood = '/whatisit/street_food.webp';
 
 const Hero = () => {
   const { scrollY } = useScroll();

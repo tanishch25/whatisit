@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import restaurantInterior from '../assets/restaurant_interior.webp';
-import heroFood from '../assets/hero_food.webp';
 import biryaniFood from '../assets/biryani_food.webp';
-import streetFood from '../assets/street_food.webp';
+
+const heroFood = '/whatisit/hero_food.webp';
+const streetFood = '/whatisit/street_food.webp';
 
 const images = [
   restaurantInterior,
