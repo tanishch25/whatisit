@@ -77,6 +77,7 @@ const MenuHighlights = () => {
             >
               <div className="w-full sm:w-2/5 h-48 sm:h-auto sm:aspect-square rounded-xl overflow-hidden shrink-0">
                 <img 
+                  loading="lazy"
                   src={item.image} 
                   alt={item.title} 
                   className="w-full h-full object-cover transform group-hover:scale-105 transition duration-1000"

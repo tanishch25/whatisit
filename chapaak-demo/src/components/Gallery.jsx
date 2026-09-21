@@ -65,9 +65,10 @@ const Gallery = () => {
                 className={`relative group overflow-hidden ${spanClass} ${heightClass}`}
               >
                 <img 
+                  loading="lazy"
                   src={src} 
-                  alt={`Gallery ${index + 1}`} 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition duration-1000"
+                  alt={`Gallery image ${index + 1}`} 
+                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-500"></div>
               </motion.div>
